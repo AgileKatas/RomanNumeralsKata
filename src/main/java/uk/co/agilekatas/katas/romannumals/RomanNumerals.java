@@ -1,22 +1,28 @@
 package uk.co.agilekatas.katas.romannumals;
 
+import java.util.Comparator;
+import java.util.Map.Entry;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
 public class RomanNumerals {
+
+    private SortedMap<Integer, String> numberToNumerals;
+
+    public RomanNumerals() {
+        numberToNumerals = new TreeMap<>(Comparator.<Integer>reverseOrder());
+        numberToNumerals.put(9, "IX");
+        numberToNumerals.put(5, "V");
+        numberToNumerals.put(4, "IV");
+        numberToNumerals.put(1, "I");
+    }
 
     public String toNumeral(int number) {
         String numeral = "";
-        while (number > 0) {
-            if (number >= 9) {
-                numeral += "IX";
-                number -= 9;
-            } else if (number >= 5) {
-                numeral += "V";
-                number -= 5;
-            } else if (number >= 4) {
-                numeral += "IV";
-                number -= 4;
-            } else if (number >= 1) {
-                numeral += "I";
-                number--;
+        for (Entry<Integer, String> numberToNumeral : numberToNumerals.entrySet()) {
+            while (number >= numberToNumeral.getKey()) {
+                numeral += numberToNumeral.getValue();
+                number -= numberToNumeral.getKey();
             }
         }
         return numeral;
