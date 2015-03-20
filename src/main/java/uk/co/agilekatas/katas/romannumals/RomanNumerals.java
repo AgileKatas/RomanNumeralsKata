@@ -11,6 +11,7 @@ public class RomanNumerals {
 
     public RomanNumerals() {
         numberToNumerals = new TreeMap<>(Comparator.<Integer>reverseOrder());
+        numberToNumerals.put(900, "CM");
         numberToNumerals.put(500, "D");
         numberToNumerals.put(400, "CD");
         numberToNumerals.put(100, "C");

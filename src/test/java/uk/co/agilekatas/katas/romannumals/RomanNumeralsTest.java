@@ -80,4 +80,10 @@ public class RomanNumeralsTest {
         assertThat(numeral).isEqualTo("D");
     }
 
+    @Test
+    public void shouldReturnCorrectNumeralForNineHundred() {
+        String numeral = romanNumerals.toNumeral(900);
+        assertThat(numeral).isEqualTo("CM");
+    }
+
 }
