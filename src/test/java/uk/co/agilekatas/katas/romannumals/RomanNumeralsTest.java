@@ -74,4 +74,10 @@ public class RomanNumeralsTest {
         assertThat(numeral).isEqualTo("CD");
     }
 
+    @Test
+    public void shouldReturnCorrectNumeralForFiveHundred() {
+        String numeral = romanNumerals.toNumeral(500);
+        assertThat(numeral).isEqualTo("D");
+    }
+
 }
