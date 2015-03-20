@@ -25,4 +25,10 @@ public class RomanNumeralsTest {
         String numeral = romanNumerals.toNumeral(4);
         assertThat(numeral).isEqualTo("IV");
     }
+
+    @Test
+    public void shouldReturnCorrectNumeralForFive() {
+        String numeral = romanNumerals.toNumeral(5);
+        assertThat(numeral).isEqualTo("V");
+    }
 }
