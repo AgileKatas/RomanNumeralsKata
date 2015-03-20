@@ -56,4 +56,10 @@ public class RomanNumeralsTest {
         assertThat(numeral).isEqualTo("L");
     }
 
+    @Test
+    public void shouldReturnCorrectNumeralForNinety() {
+        String numeral = romanNumerals.toNumeral(90);
+        assertThat(numeral).isEqualTo("XC");
+    }
+
 }
