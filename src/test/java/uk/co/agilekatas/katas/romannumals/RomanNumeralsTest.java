@@ -43,4 +43,10 @@ public class RomanNumeralsTest {
         String numeral = romanNumerals.toNumeral(10);
         assertThat(numeral).isEqualTo("X");
     }
+
+    @Test
+    public void shouldReturnCorrectNumeralForForty() {
+        String numeral = romanNumerals.toNumeral(40);
+        assertThat(numeral).isEqualTo("XL");
+    }
 }
