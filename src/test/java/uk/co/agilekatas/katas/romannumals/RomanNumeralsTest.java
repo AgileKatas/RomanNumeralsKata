@@ -14,4 +14,9 @@ public class RomanNumeralsTest {
         assertThat(numeral).isEqualTo("I");
     }
 
+    @Test
+    public void shouldReturnCorrectNumeralForTwo() {
+        String numeral = romanNumerals.toNumeral(2);
+        assertThat(numeral).isEqualTo("II");
+    }
 }
