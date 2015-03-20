@@ -86,4 +86,10 @@ public class RomanNumeralsTest {
         assertThat(numeral).isEqualTo("CM");
     }
 
+    @Test
+    public void shouldReturnCorrectNumeralForOneThousand() {
+        String numeral = romanNumerals.toNumeral(1000);
+        assertThat(numeral).isEqualTo("M");
+    }
+
 }
