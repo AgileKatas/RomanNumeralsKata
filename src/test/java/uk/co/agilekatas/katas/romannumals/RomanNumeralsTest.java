@@ -49,4 +49,11 @@ public class RomanNumeralsTest {
         String numeral = romanNumerals.toNumeral(40);
         assertThat(numeral).isEqualTo("XL");
     }
+
+    @Test
+    public void shouldReturnCorrectNumeralForFifty() {
+        String numeral = romanNumerals.toNumeral(50);
+        assertThat(numeral).isEqualTo("L");
+    }
+
 }
