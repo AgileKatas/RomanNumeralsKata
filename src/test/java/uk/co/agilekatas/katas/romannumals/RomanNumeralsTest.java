@@ -19,4 +19,10 @@ public class RomanNumeralsTest {
         String numeral = romanNumerals.toNumeral(2);
         assertThat(numeral).isEqualTo("II");
     }
+
+    @Test
+    public void shouldReturnCorrectNumeralForFour() {
+        String numeral = romanNumerals.toNumeral(4);
+        assertThat(numeral).isEqualTo("IV");
+    }
 }
