@@ -68,4 +68,10 @@ public class RomanNumeralsTest {
         assertThat(numeral).isEqualTo("C");
     }
 
+    @Test
+    public void shouldReturnCorrectNumeralForFourHundred() {
+        String numeral = romanNumerals.toNumeral(400);
+        assertThat(numeral).isEqualTo("CD");
+    }
+
 }
